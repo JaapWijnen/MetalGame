@@ -7,13 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		701FB6461EE9DE13008DB862 /* rocks.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 701FB6451EE9DE12008DB862 /* rocks.jpg */; };
+		701FB6481EE9F6BF008DB862 /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701FB6471EE9F6BF008DB862 /* Window.swift */; };
+		701FB64D1EEB0934008DB862 /* Quad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701FB64C1EEB0934008DB862 /* Quad.swift */; };
+		706BB0D51EEB367B005C5996 /* SubCube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706BB0D41EEB367B005C5996 /* SubCube.swift */; };
 		706BF25A1EE7C39000A3F720 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706BF2591EE7C39000A3F720 /* AppDelegate.swift */; };
 		706BF25C1EE7C39000A3F720 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706BF25B1EE7C39000A3F720 /* ViewController.swift */; };
 		706BF25E1EE7C39000A3F720 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 706BF25D1EE7C39000A3F720 /* Assets.xcassets */; };
 		706BF2611EE7C39000A3F720 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 706BF25F1EE7C39000A3F720 /* Main.storyboard */; };
+		706BF26A1EE7C3DE00A3F720 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706BF2691EE7C3DE00A3F720 /* Renderer.swift */; };
+		706BF26C1EE7CB5500A3F720 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706BF26B1EE7CB5500A3F720 /* Types.swift */; };
+		706BF26E1EE7CF1900A3F720 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 706BF26D1EE7CF1900A3F720 /* Shaders.metal */; };
+		706BF2701EE8903900A3F720 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706BF26F1EE8903900A3F720 /* Scene.swift */; };
+		706BF2721EE8905C00A3F720 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706BF2711EE8905C00A3F720 /* Node.swift */; };
+		706BF2741EE8917F00A3F720 /* MatrixMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706BF2731EE8917F00A3F720 /* MatrixMath.swift */; };
+		706BF2761EE8928700A3F720 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706BF2751EE8928700A3F720 /* Camera.swift */; };
+		706BF27A1EE8D0A000A3F720 /* Renderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706BF2791EE8D0A000A3F720 /* Renderable.swift */; };
+		706BF27C1EE8D23A00A3F720 /* Texturable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706BF27B1EE8D23A00A3F720 /* Texturable.swift */; };
+		706BF27E1EE8D28500A3F720 /* Primitive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706BF27D1EE8D28500A3F720 /* Primitive.swift */; };
+		706BF2801EE8D8CE00A3F720 /* Cube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706BF27F1EE8D8CE00A3F720 /* Cube.swift */; };
+		709FC6831EE9CF2200C90B5C /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709FC6821EE9CF2200C90B5C /* GameScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		701FB6451EE9DE12008DB862 /* rocks.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = rocks.jpg; path = ../../../Downloads/rocks.jpg; sourceTree = "<group>"; };
+		701FB6471EE9F6BF008DB862 /* Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
+		701FB64C1EEB0934008DB862 /* Quad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quad.swift; sourceTree = "<group>"; };
+		706BB0D41EEB367B005C5996 /* SubCube.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCube.swift; sourceTree = "<group>"; };
 		706BF2561EE7C39000A3F720 /* Fissa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fissa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		706BF2591EE7C39000A3F720 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		706BF25B1EE7C39000A3F720 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -21,6 +41,18 @@
 		706BF2601EE7C39000A3F720 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		706BF2621EE7C39000A3F720 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		706BF2631EE7C39000A3F720 /* Fissa.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Fissa.entitlements; sourceTree = "<group>"; };
+		706BF2691EE7C3DE00A3F720 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		706BF26B1EE7CB5500A3F720 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		706BF26D1EE7CF1900A3F720 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		706BF26F1EE8903900A3F720 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		706BF2711EE8905C00A3F720 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		706BF2731EE8917F00A3F720 /* MatrixMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixMath.swift; sourceTree = "<group>"; };
+		706BF2751EE8928700A3F720 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		706BF2791EE8D0A000A3F720 /* Renderable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderable.swift; sourceTree = "<group>"; };
+		706BF27B1EE8D23A00A3F720 /* Texturable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Texturable.swift; sourceTree = "<group>"; };
+		706BF27D1EE8D28500A3F720 /* Primitive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Primitive.swift; sourceTree = "<group>"; };
+		706BF27F1EE8D8CE00A3F720 /* Cube.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cube.swift; sourceTree = "<group>"; };
+		709FC6821EE9CF2200C90B5C /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +66,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		701FB64A1EEA1ACB008DB862 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				706BF27B1EE8D23A00A3F720 /* Texturable.swift */,
+				706BF27F1EE8D8CE00A3F720 /* Cube.swift */,
+				706BB0D41EEB367B005C5996 /* SubCube.swift */,
+				701FB64C1EEB0934008DB862 /* Quad.swift */,
+				706BF27D1EE8D28500A3F720 /* Primitive.swift */,
+				706BF2751EE8928700A3F720 /* Camera.swift */,
+				706BF2711EE8905C00A3F720 /* Node.swift */,
+				706BF2791EE8D0A000A3F720 /* Renderable.swift */,
+			);
+			path = Nodes;
+			sourceTree = "<group>";
+		};
+		701FB64B1EEA1AD2008DB862 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				706BF26F1EE8903900A3F720 /* Scene.swift */,
+				709FC6821EE9CF2200C90B5C /* GameScene.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 		706BF24D1EE7C39000A3F720 = {
 			isa = PBXGroup;
 			children = (
@@ -54,7 +110,15 @@
 			isa = PBXGroup;
 			children = (
 				706BF2591EE7C39000A3F720 /* AppDelegate.swift */,
+				701FB6471EE9F6BF008DB862 /* Window.swift */,
 				706BF25B1EE7C39000A3F720 /* ViewController.swift */,
+				706BF2691EE7C3DE00A3F720 /* Renderer.swift */,
+				706BF26B1EE7CB5500A3F720 /* Types.swift */,
+				706BF2731EE8917F00A3F720 /* MatrixMath.swift */,
+				701FB64A1EEA1ACB008DB862 /* Nodes */,
+				701FB64B1EEA1AD2008DB862 /* Scenes */,
+				706BF26D1EE7CF1900A3F720 /* Shaders.metal */,
+				701FB6451EE9DE12008DB862 /* rocks.jpg */,
 				706BF25D1EE7C39000A3F720 /* Assets.xcassets */,
 				706BF25F1EE7C39000A3F720 /* Main.storyboard */,
 				706BF2621EE7C39000A3F720 /* Info.plist */,
@@ -121,6 +185,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				701FB6461EE9DE13008DB862 /* rocks.jpg in Resources */,
 				706BF25E1EE7C39000A3F720 /* Assets.xcassets in Resources */,
 				706BF2611EE7C39000A3F720 /* Main.storyboard in Resources */,
 			);
@@ -133,8 +198,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				701FB64D1EEB0934008DB862 /* Quad.swift in Sources */,
 				706BF25C1EE7C39000A3F720 /* ViewController.swift in Sources */,
+				706BF26A1EE7C3DE00A3F720 /* Renderer.swift in Sources */,
+				706BF2741EE8917F00A3F720 /* MatrixMath.swift in Sources */,
+				706BF2701EE8903900A3F720 /* Scene.swift in Sources */,
 				706BF25A1EE7C39000A3F720 /* AppDelegate.swift in Sources */,
+				706BF27A1EE8D0A000A3F720 /* Renderable.swift in Sources */,
+				706BF26C1EE7CB5500A3F720 /* Types.swift in Sources */,
+				706BB0D51EEB367B005C5996 /* SubCube.swift in Sources */,
+				706BF2801EE8D8CE00A3F720 /* Cube.swift in Sources */,
+				706BF27E1EE8D28500A3F720 /* Primitive.swift in Sources */,
+				706BF26E1EE7CF1900A3F720 /* Shaders.metal in Sources */,
+				706BF2721EE8905C00A3F720 /* Node.swift in Sources */,
+				701FB6481EE9F6BF008DB862 /* Window.swift in Sources */,
+				706BF27C1EE8D23A00A3F720 /* Texturable.swift in Sources */,
+				709FC6831EE9CF2200C90B5C /* GameScene.swift in Sources */,
+				706BF2761EE8928700A3F720 /* Camera.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +383,7 @@
 				706BF2681EE7C39000A3F720 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

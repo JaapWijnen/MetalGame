@@ -7,13 +7,26 @@
 //
 
 import Cocoa
+import MetalKit
 
 class ViewController: NSViewController {
+    
+    var metalView: MTKView!
+    var renderer: Renderer!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        metalView = self.view as! MTKView
+        metalView.device = MTLCreateSystemDefaultDevice()
+        
+        renderer = Renderer(withMTKView: metalView)
+        let scene = GameScene(withMTKView: metalView)
+        renderer.scene = scene
+        
+        renderer.mtkView(metalView, drawableSizeWillChange: metalView.drawableSize)
+        
+        metalView.delegate = renderer
     }
 
     override var representedObject: Any? {
@@ -21,7 +34,15 @@ class ViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
-
-
 }
+
+extension ViewController: SceneDelegate {
+    func transition(to scene: Scene) {
+        scene.size = metalView.frame.size
+        scene.sceneDelegate = self
+        renderer.scene = scene
+    }
+}
+
+
 
