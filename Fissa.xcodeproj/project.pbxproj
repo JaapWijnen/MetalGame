@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		701FB6461EE9DE13008DB862 /* rocks.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 701FB6451EE9DE12008DB862 /* rocks.jpg */; };
 		701FB6481EE9F6BF008DB862 /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701FB6471EE9F6BF008DB862 /* Window.swift */; };
 		701FB64D1EEB0934008DB862 /* Quad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 701FB64C1EEB0934008DB862 /* Quad.swift */; };
 		706BB0D51EEB367B005C5996 /* SubCube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706BB0D41EEB367B005C5996 /* SubCube.swift */; };
@@ -27,10 +26,12 @@
 		706BF27E1EE8D28500A3F720 /* Primitive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706BF27D1EE8D28500A3F720 /* Primitive.swift */; };
 		706BF2801EE8D8CE00A3F720 /* Cube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706BF27F1EE8D8CE00A3F720 /* Cube.swift */; };
 		709FC6831EE9CF2200C90B5C /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709FC6821EE9CF2200C90B5C /* GameScene.swift */; };
+		8ECD12511F958E0200FECB68 /* rocks.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8ECD12501F958D3100FECB68 /* rocks.jpg */; };
+		8ECD12531F958E3900FECB68 /* Chunk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECD12521F958E3900FECB68 /* Chunk.swift */; };
+		8ECD12551F95915400FECB68 /* MCScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECD12541F95915400FECB68 /* MCScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		701FB6451EE9DE12008DB862 /* rocks.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = rocks.jpg; path = ../../../Downloads/rocks.jpg; sourceTree = "<group>"; };
 		701FB6471EE9F6BF008DB862 /* Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
 		701FB64C1EEB0934008DB862 /* Quad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quad.swift; sourceTree = "<group>"; };
 		706BB0D41EEB367B005C5996 /* SubCube.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCube.swift; sourceTree = "<group>"; };
@@ -53,6 +54,9 @@
 		706BF27D1EE8D28500A3F720 /* Primitive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Primitive.swift; sourceTree = "<group>"; };
 		706BF27F1EE8D8CE00A3F720 /* Cube.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cube.swift; sourceTree = "<group>"; };
 		709FC6821EE9CF2200C90B5C /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		8ECD12501F958D3100FECB68 /* rocks.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rocks.jpg; sourceTree = "<group>"; };
+		8ECD12521F958E3900FECB68 /* Chunk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chunk.swift; sourceTree = "<group>"; };
+		8ECD12541F95915400FECB68 /* MCScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,7 @@
 				701FB64C1EEB0934008DB862 /* Quad.swift */,
 				706BF27D1EE8D28500A3F720 /* Primitive.swift */,
 				706BF2751EE8928700A3F720 /* Camera.swift */,
+				8ECD12521F958E3900FECB68 /* Chunk.swift */,
 				706BF2711EE8905C00A3F720 /* Node.swift */,
 				706BF2791EE8D0A000A3F720 /* Renderable.swift */,
 			);
@@ -86,6 +91,7 @@
 			children = (
 				706BF26F1EE8903900A3F720 /* Scene.swift */,
 				709FC6821EE9CF2200C90B5C /* GameScene.swift */,
+				8ECD12541F95915400FECB68 /* MCScene.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -118,8 +124,8 @@
 				701FB64A1EEA1ACB008DB862 /* Nodes */,
 				701FB64B1EEA1AD2008DB862 /* Scenes */,
 				706BF26D1EE7CF1900A3F720 /* Shaders.metal */,
-				701FB6451EE9DE12008DB862 /* rocks.jpg */,
 				706BF25D1EE7C39000A3F720 /* Assets.xcassets */,
+				8ECD12501F958D3100FECB68 /* rocks.jpg */,
 				706BF25F1EE7C39000A3F720 /* Main.storyboard */,
 				706BF2621EE7C39000A3F720 /* Info.plist */,
 				706BF2631EE7C39000A3F720 /* Fissa.entitlements */,
@@ -185,7 +191,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				701FB6461EE9DE13008DB862 /* rocks.jpg in Resources */,
+				8ECD12511F958E0200FECB68 /* rocks.jpg in Resources */,
 				706BF25E1EE7C39000A3F720 /* Assets.xcassets in Resources */,
 				706BF2611EE7C39000A3F720 /* Main.storyboard in Resources */,
 			);
@@ -215,6 +221,8 @@
 				706BF27C1EE8D23A00A3F720 /* Texturable.swift in Sources */,
 				709FC6831EE9CF2200C90B5C /* GameScene.swift in Sources */,
 				706BF2761EE8928700A3F720 /* Camera.swift in Sources */,
+				8ECD12551F95915400FECB68 /* MCScene.swift in Sources */,
+				8ECD12531F958E3900FECB68 /* Chunk.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

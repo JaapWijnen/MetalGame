@@ -51,7 +51,7 @@ class Quad: Primitive {
     
     func rotateY(radians: Float, subdivs: UInt16) {
         let totalVertices = Int((subdivs + 1) * (subdivs + 1))
-        var vertexBufferPointer = UnsafeMutableRawBufferPointer(start: vertexBuffer?.contents(), count: totalVertices * MemoryLayout<Vertex>.stride)
+        let vertexBufferPointer = UnsafeMutableRawBufferPointer(start: vertexBuffer?.contents(), count: totalVertices * MemoryLayout<Vertex>.stride)
         
         for i in 0..<totalVertices {
             var vertex = vertexBufferPointer.load(fromByteOffset: i * MemoryLayout<Vertex>.stride, as: Vertex.self)

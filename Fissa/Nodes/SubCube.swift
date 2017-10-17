@@ -23,11 +23,11 @@ class SubCube: Primitive {
         //buffer.contents().copyBytes(from: vector2, count: vector2.count * MemoryLayout<Float>.stride)
         
         vertexBuffer = device.makeBuffer(length: Int(cubeVertexBufferSize), options: [])
-        var vertexBufferPointer = vertexBuffer?.contents()
+        let vertexBufferPointer = vertexBuffer?.contents()
         vertexBufferPointer?.copyBytes(from: (quad.vertexBuffer?.contents())!, count: Int(quadVertexBufferSize))
         
         indexBuffer = device.makeBuffer(length: Int(cubeIndexBufferSize), options: [])
-        var indexBufferPointer = indexBuffer?.contents()
+        let indexBufferPointer = indexBuffer?.contents()
         indexBufferPointer?.copyBytes(from: (quad.indexBuffer?.contents())!, count: Int(quadIndexBufferSize))
         //vertexBuffer = device.makeBuffer(bytes: vertices, length: vertices.count * MemoryLayout<Vertex>.stride, options: [])
         //indexBuffer = device.makeBuffer(bytes: indices, length: indices.count * MemoryLayout<Float>.stride, options: [])

@@ -50,18 +50,18 @@ extension Renderer: MTKViewDelegate {
         guard let drawable = view.currentDrawable,
             let descriptor = view.currentRenderPassDescriptor else { return }
         let commandBuffer = commandQueue.makeCommandBuffer()
-        let commandEncoder = commandBuffer.makeRenderCommandEncoder(descriptor: descriptor)
+        let commandEncoder = commandBuffer?.makeRenderCommandEncoder(descriptor: descriptor)
         
         let deltaTime = 1 / Float(view.preferredFramesPerSecond)
         
-        commandEncoder.setFragmentSamplerState(samplerState, index: 0)
-        commandEncoder.setDepthStencilState(depthStencilState)
+        commandEncoder?.setFragmentSamplerState(samplerState, index: 0)
+        commandEncoder?.setDepthStencilState(depthStencilState)
         
-        scene?.render(deltaTime: deltaTime, commandEncoder: commandEncoder)
+        scene?.render(deltaTime: deltaTime, commandEncoder: commandEncoder!)
         
-        commandEncoder.endEncoding()
-        commandBuffer.present(drawable)
-        commandBuffer.commit()
+        commandEncoder?.endEncoding()
+        commandBuffer?.present(drawable)
+        commandBuffer?.commit()
         
     }
     

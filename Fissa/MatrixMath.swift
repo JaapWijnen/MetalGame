@@ -14,35 +14,6 @@ extension Float {
     }
 }
 
-extension vector_float3: Equatable {
-    public static func == (lhs: vector_float3, rhs: vector_float3) -> Bool {
-        return
-            lhs.x == rhs.x &&
-                lhs.y == rhs.y &&
-                lhs.z == rhs.z
-    }
-}
-
-extension vector_float4: Equatable {
-    public static func == (lhs: vector_float4, rhs: vector_float4) -> Bool {
-        return
-            lhs.w == rhs.w &&
-                lhs.x == rhs.x &&
-                lhs.y == rhs.y &&
-                lhs.z == rhs.z
-    }
-}
-
-extension matrix_float4x4: Equatable {
-    public static func == (lhs: matrix_float4x4, rhs: matrix_float4x4) -> Bool {
-        return
-            lhs.columns.0 == lhs.columns.0 &&
-                lhs.columns.1 == lhs.columns.1 &&
-                lhs.columns.2 == lhs.columns.2 &&
-                lhs.columns.3 == lhs.columns.3
-    }
-}
-
 extension vector_float3 {
     public var length: Float {
         get {
