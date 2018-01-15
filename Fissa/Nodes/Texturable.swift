@@ -20,9 +20,6 @@ extension Texturable {
         let origin = MTKTextureLoader.Origin.bottomLeft
         let textureLoaderOptions = [MTKTextureLoader.Option.origin: origin]
         
-        print("Fissa")
-        print(Bundle.main.url(forResource: "rocks", withExtension: "jpg"))
-        
         if let textureURL = Bundle.main.url(forResource: imageName, withExtension: nil) {
             do {
                 texture = try textureLoader.newTexture(URL: textureURL, options: textureLoaderOptions)
