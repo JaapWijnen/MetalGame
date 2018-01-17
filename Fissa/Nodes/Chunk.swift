@@ -84,17 +84,26 @@ class Chunk: Primitive {
         indexBuffer = device.makeBuffer(bytes: indices, length: indices.count * MemoryLayout<Float>.stride, options: [])
     }
     
+    func alsoGreedyMesh() {
+        
+    }
+    
+    
+    
+    
     func greedyMesh(volume: [[[Bool]]], dims: [Int]) -> [[[Int]]] {
         assert(dims.count == 3)
         var quads: [[[Int]]] = []
         
         for d in 0..<3 {
             print("d: \(d)")
+            
             let u = (d + 1) % 3
             let v = (d + 2) % 3
             var x = [0, 0, 0]
             var q = [0, 0, 0]
             var mask = [[Bool]](repeating: [Bool](repeating: false, count: dims[u]), count: dims[v])
+            var dirMask = [[Bool]](repeating: [Bool](repeating: false, count: dims[u]), count: dims[v])
             q[d] = 1
             x[d] = -1
             while x[d] < dims[d] {
@@ -115,6 +124,17 @@ class Chunk: Primitive {
                 x[d] += 1
                 
                 print(" mask: \(mask)")
+                
+                // generate directional mask
+                for (mi, dmi) in zip(mask.indices, dirMask.indices) {
+                    for (mj, dmj) in zip(mask[mi].indices, dirMask[dmi].indices) {
+                        if mask[mi][mj] {
+                            dirMask[dmi][dmj] = !dirMask[dmi][dmj]
+                        }
+                    }
+                }
+                
+                print(" dirmask: \(dirMask)")
                 
                 // Generate mesh from mask
                 for j in 0..<dims[v] {
@@ -149,12 +169,23 @@ class Chunk: Primitive {
                             du[u] = w
                             var dv = [0, 0, 0]
                             dv[v] = h
-                            let quad = [
-                                [x[0],                 x[1],                 x[2]                 ],
-                                [x[0] + du[0],         x[1] + du[1],         x[2] + du[2]         ],
-                                [x[0] + du[0] + dv[0], x[1] + du[1] + dv[1], x[2] + du[2] + dv[2] ],
-                                [x[0] + dv[0],         x[1] + dv[1],         x[2] + dv[2]         ]
-                            ]
+                            let quad: [[Int]]
+                            if dirMask[j][i] {
+                                quad = [
+                                    [x[0],                 x[1],                 x[2]                 ],
+                                    [x[0] + dv[0],         x[1] + dv[1],         x[2] + dv[2]         ],
+                                    [x[0] + du[0] + dv[0], x[1] + du[1] + dv[1], x[2] + du[2] + dv[2] ],
+                                    [x[0] + du[0],         x[1] + du[1],         x[2] + du[2]         ]
+                                ]
+                            } else {
+                                quad = [
+                                    [x[0],                 x[1],                 x[2]                 ],
+                                    [x[0] + du[0],         x[1] + du[1],         x[2] + du[2]         ],
+                                    [x[0] + du[0] + dv[0], x[1] + du[1] + dv[1], x[2] + du[2] + dv[2] ],
+                                    [x[0] + dv[0],         x[1] + dv[1],         x[2] + dv[2]         ]
+                                ]
+                            }
+                            
                             quads.append(quad)
                             
                             // Zero out mask

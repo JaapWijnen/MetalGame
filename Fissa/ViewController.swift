@@ -21,7 +21,7 @@ class ViewController: NSViewController {
         metalView.device = MTLCreateSystemDefaultDevice()
         
         renderer = Renderer(withMTKView: metalView)
-        let scene = SintScene(withMTKView: metalView)
+        let scene = MCScene(withMTKView: metalView)
         renderer.scene = scene
         
         renderer.mtkView(metalView, drawableSizeWillChange: metalView.drawableSize)
